@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct Work_AroundApp: App {
+    
     var body: some Scene {
+        
         WindowGroup {
             ContentView()
-        }
-    }
-}
+            
+        }}}

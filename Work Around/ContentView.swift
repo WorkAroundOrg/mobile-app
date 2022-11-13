@@ -16,8 +16,314 @@ let backgrondGradient_Full = LinearGradient(
     startPoint: .top, endPoint: .bottom)
 
 
+// View to show client information once selected from the job categories ----------------------------------------------
+struct ClientProfileView: View {
+    @Environment(\.presentationMode) var presentationMode
+    @State private var date = Date()
+    
+    var clientChoice: String
+    
+    var body: some View {
+        ZStack{
+            
+            backgrondGradient_Full.ignoresSafeArea()
+
+            if (clientChoice == "Mark"){
+                VStack{
+                    VStack{
+                        VStack{
+                            Image("Mark").scaleEffect().cornerRadius(/*@START_MENU_TOKEN@*/500.0/*@END_MENU_TOKEN@*/)
+                            Text("Mark").font(.headline)
+                            HStack{
+                                Image(systemName: "star.fill").foregroundColor(Color.orange)
+                                    .padding(.all, -5.0)
+                                    .scaleEffect(/*@START_MENU_TOKEN@*/0.75/*@END_MENU_TOKEN@*/)
+                                Image(systemName: "star.fill").foregroundColor(Color.orange)
+                                    .padding(.all, -5.0)
+                                    .scaleEffect(/*@START_MENU_TOKEN@*/0.75/*@END_MENU_TOKEN@*/)
+                                Image(systemName: "star.fill").foregroundColor(Color.orange)
+                                    .padding(.all, -5.0)
+                                    .scaleEffect(/*@START_MENU_TOKEN@*/0.75/*@END_MENU_TOKEN@*/)
+                                Image(systemName: "star.fill").foregroundColor(Color.orange)
+                                    .padding(.all, -5.0)
+                                    .scaleEffect(/*@START_MENU_TOKEN@*/0.75/*@END_MENU_TOKEN@*/)
+                                Image(systemName: "star.fill").foregroundColor(Color.gray)
+                                    .padding(.all, -5.0)
+                                .scaleEffect(/*@START_MENU_TOKEN@*/0.75/*@END_MENU_TOKEN@*/)}
+                            Text("$20 per hour").font(.body).padding(/*@START_MENU_TOKEN@*/.all, 4.0/*@END_MENU_TOKEN@*/)}
+                        .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                        .frame(width: 250.0)
+                        .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.white/*@END_MENU_TOKEN@*/)
+                        .cornerRadius(/*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/)
+                        
+                        VStack{
+                            Text("Available Jobs:    Lawn Mowing").font(.headline).fontWeight(.semibold).padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/).italic()
+                            DatePicker("Pick a date:", selection: $date, displayedComponents: [.date])
+                            .font(.headline).padding(/*@START_MENU_TOKEN@*/.horizontal, 80.0/*@END_MENU_TOKEN@*/).italic()}
+                        .padding(/*@START_MENU_TOKEN@*/.vertical, 50.0/*@END_MENU_TOKEN@*/)}
+                    .padding(.top, 50.0)
+                    
+                    Button(action: {}, label: { HStack{
+                        Text("Hire")
+                            .foregroundColor(Color.white)
+                        Image(systemName: "arrow.right")
+                        .foregroundColor(Color.white)}
+                    .padding()
+                    .frame(width: 200.0, height: 40.0)
+                    .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color(red: 0.118, green: 0.118, blue: 0.118)/*@END_MENU_TOKEN@*/)
+                    .cornerRadius(/*@START_MENU_TOKEN@*/20.0/*@END_MENU_TOKEN@*/)})
+                    
+                    Spacer()
+                }}
+            
+            if (clientChoice == "Terra"){
+                VStack{
+                    VStack{
+                        VStack{
+                            Image("Terra").scaleEffect().cornerRadius(/*@START_MENU_TOKEN@*/500.0/*@END_MENU_TOKEN@*/)
+                            Text("Terra").font(.headline)
+                            HStack{
+                                Image(systemName: "star.fill").foregroundColor(Color.orange)
+                                    .padding(.all, -5.0)
+                                    .scaleEffect(/*@START_MENU_TOKEN@*/0.75/*@END_MENU_TOKEN@*/)
+                                Image(systemName: "star.fill").foregroundColor(Color.orange)
+                                    .padding(.all, -5.0)
+                                    .scaleEffect(/*@START_MENU_TOKEN@*/0.75/*@END_MENU_TOKEN@*/)
+                                Image(systemName: "star.fill").foregroundColor(Color.orange)
+                                    .padding(.all, -5.0)
+                                    .scaleEffect(/*@START_MENU_TOKEN@*/0.75/*@END_MENU_TOKEN@*/)
+                                Image(systemName: "star.fill").foregroundColor(Color.orange)
+                                    .padding(.all, -5.0)
+                                    .scaleEffect(/*@START_MENU_TOKEN@*/0.75/*@END_MENU_TOKEN@*/)
+                                Image(systemName: "star.fill").foregroundColor(Color.orange)
+                                    .padding(.all, -5.0)
+                                .scaleEffect(/*@START_MENU_TOKEN@*/0.75/*@END_MENU_TOKEN@*/)}
+                            Text("$22 per hour").font(.body).padding(/*@START_MENU_TOKEN@*/.all, 4.0/*@END_MENU_TOKEN@*/)}
+                        .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                        .frame(width: 250.0)
+                        .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.white/*@END_MENU_TOKEN@*/)
+                        .cornerRadius(/*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/)
+                        
+                        VStack{
+                            Text("Available Jobs:    Lawn Mowing").font(.headline).fontWeight(.semibold).padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/).italic()
+                            DatePicker("Pick a date:", selection: $date, displayedComponents: [.date])
+                            .font(.headline).padding(/*@START_MENU_TOKEN@*/.horizontal, 80.0/*@END_MENU_TOKEN@*/).italic()}
+                        .padding(/*@START_MENU_TOKEN@*/.vertical, 50.0/*@END_MENU_TOKEN@*/)}
+                    .padding(.top, 50.0)
+                    
+                    Button(action: {}, label: { HStack{
+                        Text("Hire")
+                            .foregroundColor(Color.white)
+                        Image(systemName: "arrow.right")
+                        .foregroundColor(Color.white)}
+                    .padding()
+                    .frame(width: 200.0, height: 40.0)
+                    .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color(red: 0.118, green: 0.118, blue: 0.118)/*@END_MENU_TOKEN@*/)
+                    .cornerRadius(/*@START_MENU_TOKEN@*/20.0/*@END_MENU_TOKEN@*/)})
+                    Spacer()
+                }}
+            
+            if (clientChoice == "Daniel"){
+                VStack{
+                    VStack{
+                        VStack{
+                            Image("Daniel").scaleEffect().cornerRadius(/*@START_MENU_TOKEN@*/500.0/*@END_MENU_TOKEN@*/)
+                            Text("Daniel").font(.headline)
+                            HStack{
+                                Image(systemName: "star.fill").foregroundColor(Color.orange)
+                                    .padding(.all, -5.0)
+                                    .scaleEffect(/*@START_MENU_TOKEN@*/0.75/*@END_MENU_TOKEN@*/)
+                                Image(systemName: "star.fill").foregroundColor(Color.orange)
+                                    .padding(.all, -5.0)
+                                    .scaleEffect(/*@START_MENU_TOKEN@*/0.75/*@END_MENU_TOKEN@*/)
+                                Image(systemName: "star.fill").foregroundColor(Color.orange)
+                                    .padding(.all, -5.0)
+                                    .scaleEffect(/*@START_MENU_TOKEN@*/0.75/*@END_MENU_TOKEN@*/)
+                                Image(systemName: "star.fill").foregroundColor(Color.orange)
+                                    .padding(.all, -5.0)
+                                    .scaleEffect(/*@START_MENU_TOKEN@*/0.75/*@END_MENU_TOKEN@*/)
+                                Image(systemName: "star.fill").foregroundColor(Color.gray)
+                                    .padding(.all, -5.0)
+                                .scaleEffect(/*@START_MENU_TOKEN@*/0.75/*@END_MENU_TOKEN@*/)}
+                            Text("$21 per hour").font(.body).padding(/*@START_MENU_TOKEN@*/.all, 4.0/*@END_MENU_TOKEN@*/)}
+                        .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                        .frame(width: 250.0)
+                        .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.white/*@END_MENU_TOKEN@*/)
+                        .cornerRadius(/*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/)
+                        
+                        VStack{
+                            Text("Available Jobs:    Pressure Washing").font(.headline).fontWeight(.semibold).padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/).italic()
+                            DatePicker("Pick a date:", selection: $date, displayedComponents: [.date])
+                            .font(.headline).padding(/*@START_MENU_TOKEN@*/.horizontal, 80.0/*@END_MENU_TOKEN@*/).italic()}
+                        .padding(/*@START_MENU_TOKEN@*/.vertical, 50.0/*@END_MENU_TOKEN@*/)}
+                    .padding(.top, 50.0)
+                    
+                    Button(action: {}, label: { HStack{
+                        Text("Hire")
+                            .foregroundColor(Color.white)
+                        Image(systemName: "arrow.right")
+                        .foregroundColor(Color.white)}
+                    .padding()
+                    .frame(width: 200.0, height: 40.0)
+                    .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color(red: 0.118, green: 0.118, blue: 0.118)/*@END_MENU_TOKEN@*/)
+                    .cornerRadius(/*@START_MENU_TOKEN@*/20.0/*@END_MENU_TOKEN@*/)})
+                    Spacer()
+                }}
+            
+            if (clientChoice == "Angie"){
+                VStack{
+                    VStack{
+                        VStack{
+                            Image("Angie").scaleEffect().cornerRadius(/*@START_MENU_TOKEN@*/500.0/*@END_MENU_TOKEN@*/)
+                            Text("Angie").font(.headline)
+                            HStack{
+                                Image(systemName: "star.fill").foregroundColor(Color.orange)
+                                    .padding(.all, -5.0)
+                                    .scaleEffect(/*@START_MENU_TOKEN@*/0.75/*@END_MENU_TOKEN@*/)
+                                Image(systemName: "star.fill").foregroundColor(Color.orange)
+                                    .padding(.all, -5.0)
+                                    .scaleEffect(/*@START_MENU_TOKEN@*/0.75/*@END_MENU_TOKEN@*/)
+                                Image(systemName: "star.fill").foregroundColor(Color.orange)
+                                    .padding(.all, -5.0)
+                                    .scaleEffect(/*@START_MENU_TOKEN@*/0.75/*@END_MENU_TOKEN@*/)
+                                Image(systemName: "star.fill").foregroundColor(Color.orange)
+                                    .padding(.all, -5.0)
+                                    .scaleEffect(/*@START_MENU_TOKEN@*/0.75/*@END_MENU_TOKEN@*/)
+                                Image(systemName: "star.fill").foregroundColor(Color.orange)
+                                    .padding(.all, -5.0)
+                                .scaleEffect(/*@START_MENU_TOKEN@*/0.75/*@END_MENU_TOKEN@*/)}
+                            Text("$25 per hour").font(.body).padding(/*@START_MENU_TOKEN@*/.all, 4.0/*@END_MENU_TOKEN@*/)}
+                        .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                        .frame(width: 250.0)
+                        .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.white/*@END_MENU_TOKEN@*/)
+                        .cornerRadius(/*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/)
+                        
+                        VStack{
+                            Text("Available Jobs:    Pressure Washing").font(.headline).fontWeight(.semibold).padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/).italic()
+                            DatePicker("Pick a date:", selection: $date, displayedComponents: [.date])
+                            .font(.headline).padding(/*@START_MENU_TOKEN@*/.horizontal, 80.0/*@END_MENU_TOKEN@*/).italic()}
+                        .padding(/*@START_MENU_TOKEN@*/.vertical, 50.0/*@END_MENU_TOKEN@*/)}
+                    .padding(.top, 50.0)
+                    
+                    Button(action: {}, label: { HStack{
+                        Text("Hire")
+                            .foregroundColor(Color.white)
+                        Image(systemName: "arrow.right")
+                        .foregroundColor(Color.white)}
+                    .padding()
+                    .frame(width: 200.0, height: 40.0)
+                    .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color(red: 0.118, green: 0.118, blue: 0.118)/*@END_MENU_TOKEN@*/)
+                    .cornerRadius(/*@START_MENU_TOKEN@*/20.0/*@END_MENU_TOKEN@*/)})
+                    Spacer()
+                }}
+            
+            if (clientChoice == "Jack"){
+                VStack{
+                    VStack{
+                        VStack{
+                            Image("Jack").scaleEffect().cornerRadius(/*@START_MENU_TOKEN@*/500.0/*@END_MENU_TOKEN@*/)
+                            Text("Jack").font(.headline)
+                            HStack{
+                                Image(systemName: "star.fill").foregroundColor(Color.orange)
+                                    .padding(.all, -5.0)
+                                    .scaleEffect(/*@START_MENU_TOKEN@*/0.75/*@END_MENU_TOKEN@*/)
+                                Image(systemName: "star.fill").foregroundColor(Color.orange)
+                                    .padding(.all, -5.0)
+                                    .scaleEffect(/*@START_MENU_TOKEN@*/0.75/*@END_MENU_TOKEN@*/)
+                                Image(systemName: "star.fill").foregroundColor(Color.orange)
+                                    .padding(.all, -5.0)
+                                    .scaleEffect(/*@START_MENU_TOKEN@*/0.75/*@END_MENU_TOKEN@*/)
+                                Image(systemName: "star.fill").foregroundColor(Color.orange)
+                                    .padding(.all, -5.0)
+                                    .scaleEffect(/*@START_MENU_TOKEN@*/0.75/*@END_MENU_TOKEN@*/)
+                                Image(systemName: "star.fill").foregroundColor(Color.gray)
+                                    .padding(.all, -5.0)
+                                .scaleEffect(/*@START_MENU_TOKEN@*/0.75/*@END_MENU_TOKEN@*/)}
+                            Text("$23 per hour").font(.body).padding(/*@START_MENU_TOKEN@*/.all, 4.0/*@END_MENU_TOKEN@*/)}
+                        .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                        .frame(width: 250.0)
+                        .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.white/*@END_MENU_TOKEN@*/)
+                        .cornerRadius(/*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/)
+                        
+                        VStack{
+                            Text("Available Jobs:    Hedge Trimming").font(.headline).fontWeight(.semibold).padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/).italic()
+                            DatePicker("Pick a date:", selection: $date, displayedComponents: [.date])
+                            .font(.headline).padding(/*@START_MENU_TOKEN@*/.horizontal, 80.0/*@END_MENU_TOKEN@*/).italic()}
+                        .padding(/*@START_MENU_TOKEN@*/.vertical, 50.0/*@END_MENU_TOKEN@*/)}
+                    .padding(.top, 50.0)
+                    
+                    Button(action: {}, label: { HStack{
+                        Text("Hire")
+                            .foregroundColor(Color.white)
+                        Image(systemName: "arrow.right")
+                        .foregroundColor(Color.white)}
+                    .padding()
+                    .frame(width: 200.0, height: 40.0)
+                    .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color(red: 0.118, green: 0.118, blue: 0.118)/*@END_MENU_TOKEN@*/)
+                    .cornerRadius(/*@START_MENU_TOKEN@*/20.0/*@END_MENU_TOKEN@*/)})
+                    Spacer()
+                }}
+            
+            if (clientChoice == "Rohan"){
+                VStack{
+                    VStack{
+                        VStack{
+                            Image("Rohan").scaleEffect().cornerRadius(/*@START_MENU_TOKEN@*/500.0/*@END_MENU_TOKEN@*/)
+                            Text("Rohan").font(.headline)
+                            HStack{
+                                Image(systemName: "star.fill").foregroundColor(Color.orange)
+                                    .padding(.all, -5.0)
+                                    .scaleEffect(/*@START_MENU_TOKEN@*/0.75/*@END_MENU_TOKEN@*/)
+                                Image(systemName: "star.fill").foregroundColor(Color.orange)
+                                    .padding(.all, -5.0)
+                                    .scaleEffect(/*@START_MENU_TOKEN@*/0.75/*@END_MENU_TOKEN@*/)
+                                Image(systemName: "star.fill").foregroundColor(Color.orange)
+                                    .padding(.all, -5.0)
+                                    .scaleEffect(/*@START_MENU_TOKEN@*/0.75/*@END_MENU_TOKEN@*/)
+                                Image(systemName: "star.fill").foregroundColor(Color.orange)
+                                    .padding(.all, -5.0)
+                                    .scaleEffect(/*@START_MENU_TOKEN@*/0.75/*@END_MENU_TOKEN@*/)
+                                Image(systemName: "star.fill").foregroundColor(Color.orange)
+                                    .padding(.all, -5.0)
+                                .scaleEffect(/*@START_MENU_TOKEN@*/0.75/*@END_MENU_TOKEN@*/)}
+                            Text("$25 per hour").font(.body).padding(/*@START_MENU_TOKEN@*/.all, 4.0/*@END_MENU_TOKEN@*/)}
+                        .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                        .frame(width: 250.0)
+                        .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.white/*@END_MENU_TOKEN@*/)
+                        .cornerRadius(/*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/)
+                        
+                        VStack{
+                            Text("Available Jobs:    Hedge Trimming").font(.headline).fontWeight(.semibold).padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/).italic()
+                            DatePicker("Pick a date:", selection: $date, displayedComponents: [.date])
+                            .font(.headline).padding(/*@START_MENU_TOKEN@*/.horizontal, 80.0/*@END_MENU_TOKEN@*/).italic()}
+                        .padding(/*@START_MENU_TOKEN@*/.vertical, 50.0/*@END_MENU_TOKEN@*/)}
+                    .padding(.top, 50.0)
+                    
+                    Button(action: {}, label: { HStack{
+                        Text("Hire")
+                            .foregroundColor(Color.white)
+                        Image(systemName: "arrow.right")
+                        .foregroundColor(Color.white)}
+                    .padding()
+                    .frame(width: 200.0, height: 40.0)
+                    .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color(red: 0.118, green: 0.118, blue: 0.118)/*@END_MENU_TOKEN@*/)
+                    .cornerRadius(/*@START_MENU_TOKEN@*/20.0/*@END_MENU_TOKEN@*/)})
+                    Spacer()
+                }}}
+            
+                .navigationBarBackButtonHidden(true) // Hide default button
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarLeading){
+                        Button(action:{ self.presentationMode.wrappedValue.dismiss() }){
+                            Text("< Back")
+                            
+                        }}}
+        }}
+
+
 // this view shows when law mowing button is clicked ------------------------------------------------------------------
 struct LawnMowingView: View {
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         NavigationView {
@@ -26,9 +332,11 @@ struct LawnMowingView: View {
                 backgrondGradient_Full.ignoresSafeArea()
                 
                 VStack{
-                    Spacer()
-                    Text("Lawn Mowing").font(.title).fontWeight(.semibold).padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/).frame(width: 400.0, height: 50.0).background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.white/*@END_MENU_TOKEN@*/).cornerRadius(/*@START_MENU_TOKEN@*/10.0/*@END_MENU_TOKEN@*/)
-                    Spacer()
+                    
+                    Text("Lawn Mowing")
+                        .font(.title3)
+                        .padding(.vertical, 30.0)
+                    
                     VStack{
                         HStack(alignment: .center){
                             Image("Mark").scaleEffect(/*@START_MENU_TOKEN@*/0.8/*@END_MENU_TOKEN@*/).cornerRadius(/*@START_MENU_TOKEN@*/500.0/*@END_MENU_TOKEN@*/)
@@ -60,15 +368,15 @@ struct LawnMowingView: View {
                                             .foregroundColor(Color.gray)
                                             .padding(.bottom)
                                         .italic()})
-                                    Button(action: {}, label: {
+                                    NavigationLink(destination: ClientProfileView(clientChoice: "Mark")) {
                                         HStack{
                                             Text("Hire")
                                                 .foregroundColor(Color.white)
                                             Image(systemName: "arrow.right")
-                                            .foregroundColor(Color.white)}
+                                                .foregroundColor(Color.white)}}
                                         .padding(.all, 12.0)
                                         .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color(red: 0.119, green: 0.119, blue: 0.119)/*@END_MENU_TOKEN@*/)
-                                        .cornerRadius(/*@START_MENU_TOKEN@*/8.0/*@END_MENU_TOKEN@*/)})}}}
+                                        .cornerRadius(/*@START_MENU_TOKEN@*/8.0/*@END_MENU_TOKEN@*/)}}}
                         
                         Text("''A beautiful lawn doesn't happen by itself.''")
                         .font(.footnote).fontWeight(.semibold).foregroundColor(Color.gray).italic()}
@@ -102,24 +410,36 @@ struct LawnMowingView: View {
                                     Button(action: {}, label: {
                                         Text("View my work >").font(.caption).fontWeight(.heavy)
                                             .foregroundColor(Color.gray).padding(.bottom).italic()})
-                                    Button(action: {}, label: {
+                                    NavigationLink(destination: ClientProfileView(clientChoice: "Terra")) {
                                         HStack{
-                                            Text("Hire").foregroundColor(Color.white)
-                                            Image(systemName: "arrow.right").foregroundColor(Color.white)}
+                                            Text("Hire")
+                                                .foregroundColor(Color.white)
+                                            Image(systemName: "arrow.right")
+                                                .foregroundColor(Color.white)}}
                                         .padding(.all, 12.0)
                                         .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color(red: 0.119, green: 0.119, blue: 0.119)/*@END_MENU_TOKEN@*/)
-                                        .cornerRadius(/*@START_MENU_TOKEN@*/8.0/*@END_MENU_TOKEN@*/) })}}}
+                                        .cornerRadius(/*@START_MENU_TOKEN@*/8.0/*@END_MENU_TOKEN@*/)}}}
                         
                         Text("''You can count on me to do it right.''")
                         .font(.footnote).fontWeight(.semibold).foregroundColor(Color.gray).italic()}
                     
                     .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/).background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.white/*@END_MENU_TOKEN@*/).cornerRadius(/*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/).shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
                     
-                    Spacer(); Spacer(); Spacer() }}}}}
+                    Spacer(); Spacer(); Spacer()
+                }}}
+        
+        .navigationBarBackButtonHidden(true) // Hide default button
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading){
+                Button(action:{ self.presentationMode.wrappedValue.dismiss() }){
+                    Text("< Home")
+                }}}
+    }}
 
 
 // this view shows when pressure washing button is clicked ------------------------------------------------------------
 struct PressureWashingView: View {
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         NavigationView {
@@ -128,9 +448,10 @@ struct PressureWashingView: View {
                 backgrondGradient_Full.ignoresSafeArea()
                 
                 VStack{
-                    Spacer()
-                    Text("Pressure Washing").font(.title).fontWeight(.semibold).padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/).frame(width: 400.0, height: 50.0).background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.white/*@END_MENU_TOKEN@*/).cornerRadius(/*@START_MENU_TOKEN@*/10.0/*@END_MENU_TOKEN@*/)
-                    Spacer()
+                    Text("Pressure Washing")
+                        .font(.title3)
+                        .padding(.vertical, 30.0)
+                    
                     VStack{
                         HStack(alignment: .center){
                             Image("Daniel").scaleEffect(/*@START_MENU_TOKEN@*/0.8/*@END_MENU_TOKEN@*/).cornerRadius(/*@START_MENU_TOKEN@*/500.0/*@END_MENU_TOKEN@*/)
@@ -162,15 +483,15 @@ struct PressureWashingView: View {
                                             .foregroundColor(Color.gray)
                                             .padding(.bottom)
                                         .italic()})
-                                    Button(action: {}, label: {
+                                    NavigationLink(destination: ClientProfileView(clientChoice: "Daniel")) {
                                         HStack{
                                             Text("Hire")
                                                 .foregroundColor(Color.white)
                                             Image(systemName: "arrow.right")
-                                            .foregroundColor(Color.white)}
+                                                .foregroundColor(Color.white)}}
                                         .padding(.all, 12.0)
                                         .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color(red: 0.119, green: 0.119, blue: 0.119)/*@END_MENU_TOKEN@*/)
-                                        .cornerRadius(/*@START_MENU_TOKEN@*/8.0/*@END_MENU_TOKEN@*/)})}}}
+                                        .cornerRadius(/*@START_MENU_TOKEN@*/8.0/*@END_MENU_TOKEN@*/)}}}
                         
                         Text("''Ill make it look brand new.''")
                         .font(.footnote).fontWeight(.semibold).foregroundColor(Color.gray).italic()}
@@ -203,27 +524,35 @@ struct PressureWashingView: View {
                                 VStack{
                                     Button(action: {}, label: {
                                         Text("View my work >").font(.caption).fontWeight(.heavy)
-                                            .foregroundColor(Color.gray).padding(.bottom).italic()})
-                                    Button(action: {}, label: {
+                                        .foregroundColor(Color.gray).padding(.bottom).italic()})
+                                    NavigationLink(destination: ClientProfileView(clientChoice: "Angie")) {
                                         HStack{
-                                            Text("Hire").foregroundColor(Color.white)
-                                            Image(systemName: "arrow.right").foregroundColor(Color.white)}
+                                            Text("Hire")
+                                                .foregroundColor(Color.white)
+                                            Image(systemName: "arrow.right")
+                                                .foregroundColor(Color.white)}}
                                         .padding(.all, 12.0)
                                         .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color(red: 0.119, green: 0.119, blue: 0.119)/*@END_MENU_TOKEN@*/)
-                                        .cornerRadius(/*@START_MENU_TOKEN@*/8.0/*@END_MENU_TOKEN@*/) })}}}
+                                        .cornerRadius(/*@START_MENU_TOKEN@*/8.0/*@END_MENU_TOKEN@*/)}}}
                         
                         Text("''Don't settle for less than the best.''")
                         .font(.footnote).fontWeight(.semibold).foregroundColor(Color.gray).italic()}
                     
                     .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/).background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.white/*@END_MENU_TOKEN@*/).cornerRadius(/*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/).shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
                     
-                    Spacer(); Spacer(); Spacer() }}
+                    Spacer(); Spacer(); Spacer() }}}
             
-            
-        }}}
+            .navigationBarBackButtonHidden(true) // Hide default button
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading){
+                    Button(action:{ self.presentationMode.wrappedValue.dismiss() }){
+                        Text("< Home")
+                    }}}
+        }}
 
 // this view shows when hedge trimming button is clicked --------------------------------------------------------------
 struct HedgeTrimmingView: View {
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         NavigationView {
@@ -232,9 +561,9 @@ struct HedgeTrimmingView: View {
                 backgrondGradient_Full.ignoresSafeArea()
                 
                 VStack{
-                    Spacer()
-                    Text("Hedge Trimming").font(.title).fontWeight(.semibold).padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/).frame(width: 400.0, height: 50.0).background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.white/*@END_MENU_TOKEN@*/).cornerRadius(/*@START_MENU_TOKEN@*/10.0/*@END_MENU_TOKEN@*/)
-                    Spacer()
+                    Text("Hedge Trimming")
+                        .font(.title3)
+                        .padding(.vertical, 30.0)
                     VStack{
                         HStack(alignment: .center){
                             Image("Jack").scaleEffect(/*@START_MENU_TOKEN@*/0.8/*@END_MENU_TOKEN@*/).cornerRadius(/*@START_MENU_TOKEN@*/500.0/*@END_MENU_TOKEN@*/)
@@ -266,15 +595,15 @@ struct HedgeTrimmingView: View {
                                             .foregroundColor(Color.gray)
                                             .padding(.bottom)
                                         .italic()})
-                                    Button(action: {}, label: {
+                                    NavigationLink(destination: ClientProfileView(clientChoice: "Jack")) {
                                         HStack{
                                             Text("Hire")
                                                 .foregroundColor(Color.white)
                                             Image(systemName: "arrow.right")
-                                            .foregroundColor(Color.white)}
+                                                .foregroundColor(Color.white)}}
                                         .padding(.all, 12.0)
                                         .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color(red: 0.119, green: 0.119, blue: 0.119)/*@END_MENU_TOKEN@*/)
-                                        .cornerRadius(/*@START_MENU_TOKEN@*/8.0/*@END_MENU_TOKEN@*/)})}}}
+                                        .cornerRadius(/*@START_MENU_TOKEN@*/8.0/*@END_MENU_TOKEN@*/)}}}
                         
                         Text("''Best trimming this side of town.''")
                         .font(.footnote).fontWeight(.semibold).foregroundColor(Color.gray).italic()}
@@ -307,24 +636,31 @@ struct HedgeTrimmingView: View {
                                 VStack{
                                     Button(action: {}, label: {
                                         Text("View my work >").font(.caption).fontWeight(.heavy)
-                                            .foregroundColor(Color.gray).padding(.bottom).italic()})
-                                    Button(action: {}, label: {
+                                        .foregroundColor(Color.gray).padding(.bottom).italic()})
+                                    NavigationLink(destination: ClientProfileView(clientChoice: "Rohan")) {
                                         HStack{
-                                            Text("Hire").foregroundColor(Color.white)
-                                            Image(systemName: "arrow.right").foregroundColor(Color.white)}
+                                            Text("Hire")
+                                                .foregroundColor(Color.white)
+                                            Image(systemName: "arrow.right")
+                                                .foregroundColor(Color.white)}}
                                         .padding(.all, 12.0)
                                         .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color(red: 0.119, green: 0.119, blue: 0.119)/*@END_MENU_TOKEN@*/)
-                                        .cornerRadius(/*@START_MENU_TOKEN@*/8.0/*@END_MENU_TOKEN@*/) })}}}
+                                        .cornerRadius(/*@START_MENU_TOKEN@*/8.0/*@END_MENU_TOKEN@*/)}}}
                         
                         Text("''Nature doesn't grow in straight lines.''")
                         .font(.footnote).fontWeight(.semibold).foregroundColor(Color.gray).italic()}
                     
                     .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/).background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.white/*@END_MENU_TOKEN@*/).cornerRadius(/*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/).shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
                     
-                    Spacer(); Spacer(); Spacer() }}
+                    Spacer(); Spacer(); Spacer() }}}
             
-            
-        }}}
+            .navigationBarBackButtonHidden(true) // Hide default button
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading){
+                    Button(action:{ self.presentationMode.wrappedValue.dismiss() }){
+                        Text("< Home")
+                    }}}
+        }}
 
 // this view shows when pool cleaning button is clicked ---------------------------------------------------------------
 struct PoolCleaningView: View {
@@ -332,38 +668,33 @@ struct PoolCleaningView: View {
     var body: some View {
         NavigationView {
             
-            Text("Pool Cleaning")
+            Text("Pool Cleaning Placeholder")
             
             
         }}}
 
-// this is the main view (home screen) ---------------------------------------------------------------------------------
-// ---------------------------------------------------------------------------------------------------------------------
+// this is the main view (home screen) --------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------------------
 struct ContentView: View {
     
     var body: some View {
         NavigationView {
             ZStack {
                 
-                // back layer ------------------------------------------------------------------------------------------
                 backgrondGradient_Half.ignoresSafeArea()
-                
-                // middle layer ----------------------------------------------------------------------------------------
+
                 VStack {
-                    HStack{
-                        Image("Logo")
-                            .padding(/*@START_MENU_TOKEN@*/.leading, -75.0/*@END_MENU_TOKEN@*/)
-                            .scaleEffect(/*@START_MENU_TOKEN@*/0.6/*@END_MENU_TOKEN@*/)
-                        Text("Featured Clients")
-                            .font(.title2)
-                        .padding(.leading)}
-                    .padding(/*@START_MENU_TOKEN@*/.all, -15.0/*@END_MENU_TOKEN@*/)
-                    .frame(width: 315.0, height: 55.0)
-                    .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.white/*@END_MENU_TOKEN@*/)
-                    .cornerRadius(/*@START_MENU_TOKEN@*/10.0/*@END_MENU_TOKEN@*/)
-                    .shadow(radius: /*@START_MENU_TOKEN@*/5/*@END_MENU_TOKEN@*/)
                     VStack{
                         VStack{
+                            HStack{
+                                Image("Logo")
+                                    .padding(.leading, -60.0)
+                                    .scaleEffect(0.5)
+                                Text("Featured Clients")
+                                    .fontWeight(.medium)
+                                .padding(.leading, 10.0)}
+                            .padding(/*@START_MENU_TOKEN@*/.all, -27.0/*@END_MENU_TOKEN@*/)
+                     
                             HStack(alignment: .center){
                                 
                                 Image("Mark")
@@ -417,7 +748,7 @@ struct ContentView: View {
                         .cornerRadius(/*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/)
                         .shadow(radius: /*@START_MENU_TOKEN@*/5/*@END_MENU_TOKEN@*/)}
                     
-                    Button(action: {}, label: {
+                    NavigationLink(destination: ClientProfileView(clientChoice: "Mark")) {
                         HStack{ Text("Hire Services")
                                 .font(.subheadline)
                                 .fontWeight(.bold)
@@ -429,10 +760,9 @@ struct ContentView: View {
                         .frame(width: 325.0, height: 40.0)
                         .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color(red: 0.119, green: 0.119, blue: 0.119)/*@END_MENU_TOKEN@*/)
                         .cornerRadius(/*@START_MENU_TOKEN@*/20.0/*@END_MENU_TOKEN@*/)
-                        .shadow(radius: /*@START_MENU_TOKEN@*/5/*@END_MENU_TOKEN@*/)})
+                        .shadow(radius: /*@START_MENU_TOKEN@*/5/*@END_MENU_TOKEN@*/)}
                     
                     HStack {
-                        
                         NavigationLink(destination: LawnMowingView()) {
                             VStack{
                                 Image("Mowing")
@@ -490,18 +820,12 @@ struct ContentView: View {
                     
                     Spacer()
                     Spacer()}
-                .padding(.top, 30.0)
-                
-                
-                
-                
-                
-                // top layer -------------------------------------------------------------------------------------------
+                .padding(.top, 50.0)
+
                 VStack{
-                    
                     Spacer()
                     
-                    // Bottom Row Buttons ------------------------------------------------------------------------------
+                    // Bottom Row Buttons -----------------------------------------------------------------------------
                     HStack {
                         Button(action: {}, label: { Image(systemName: "house").padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
                                 .imageScale(.large) .foregroundColor(Color(red: 0.233, green: 0.228, blue: 0.224))
@@ -519,11 +843,11 @@ struct ContentView: View {
                                 .imageScale(.large) .foregroundColor(Color(red: 0.233, green: 0.228, blue: 0.224))
                             .scaleEffect(/*@START_MENU_TOKEN@*/1.25/*@END_MENU_TOKEN@*/)})
                         
-                    }.padding(/*@START_MENU_TOKEN@*/[.top, .leading, .trailing]/*@END_MENU_TOKEN@*/) .background(Color(red: 0.993, green: 0.966, blue: 0.956))}
+                    }.padding(.horizontal, 30.0).background(Color(red: 0.993, green: 0.966, blue: 0.956))}
             }}}}
 
 
-// preview ---------------------------------------------------------------------------------------------------------
+// preview ------------------------------------------------------------------------------------------------------------
 struct ContentView_Previews: PreviewProvider {
     
     static var previews: some View {
